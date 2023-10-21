@@ -3,4 +3,4 @@
         CultureG.py
         lifegame.py
         mastermind.py
-        math.py
+        mathgame.py
