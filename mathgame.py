@@ -19,7 +19,7 @@ def poser_question():
     return question, reponse
 
 def animation():
-    print(Fore.MAGENTA + Style.BRIGHT + "Félicitations ! Vous avez atteint 10 bonnes réponses. 😁")
+    print(Fore.CYAN + Style.BRIGHT + "Félicitations ! Tu as 10 bonnes réponses. 😁")
     
     for i in range(20):
         print(Fore.GREEN + Style.BRIGHT + "🎉" * i, end="\r")
@@ -27,16 +27,27 @@ def animation():
     print(Style.RESET_ALL)
 
 def jouer_melodie():
-    for i in range(2):
-        print(Fore.LIGHTBLUE_EX + "******")
+    for i in range(1):
+        print(Fore.LIGHTBLUE_EX + "Anglais : Well done, great job!")
         winsound.Beep(200, 200)
-        print(Fore.LIGHTCYAN_EX + "************")
+        print(Fore.LIGHTCYAN_EX + "Espagnol : ¡Bien hecho, buen trabajo!")
         winsound.Beep(1000, 200)
-        print(Fore.LIGHTYELLOW_EX + "******************")
+        print(Fore.LIGHTYELLOW_EX + "Allemand : Gut gemacht, tolle Arbeit!")
         winsound.Beep(1200, 200)
-        print(Fore.LIGHTWHITE_EX + "************")
+        print(Fore.LIGHTWHITE_EX + "Italien : Ben fatto, ottimo lavoro!")
         winsound.Beep(1000, 200)
-        print(Fore.LIGHTMAGENTA_EX + "******")
+        print(Fore.LIGHTMAGENTA_EX + "Portugais : Bem feito, ótimo trabalho!")
+        winsound.Beep(440, 200)
+        time.sleep(1)
+        print(Fore.LIGHTBLUE_EX + "Néerlandais : Goed gedaan, geweldig werk!")
+        winsound.Beep(200, 200)
+        print(Fore.LIGHTCYAN_EX + "Russe : Отлично сработано, отличная работа! Prononcé : Otlichno srabotano, otlichnaya rabota!")
+        winsound.Beep(1000, 200)
+        print(Fore.LIGHTYELLOW_EX + "Chinois : 干得好，干得漂亮！Prononcé : Gàn dé hǎo, gàn dé piào liàng")
+        winsound.Beep(1200, 200)
+        print(Fore.LIGHTWHITE_EX + "Japonais : おめでとう、素晴らしい仕事！Prononcé : Omedetou, subarashii shigoto")
+        winsound.Beep(1000, 200)
+        print(Fore.LIGHTMAGENTA_EX + "Portugais : Bem feito, ótimo trabalho!")
         winsound.Beep(440, 200)
         time.sleep(1)
 
