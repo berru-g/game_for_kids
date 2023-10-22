@@ -1,9 +1,18 @@
 ### game_for_kids
 
-        CultureG.py
-        lifegame.py
-        mastermind.py
-        mathgame.py
-        hackGame.py
+**objective: Learn the basics while having fun**
+*difficulty:*
 
-        'for my niece work in progress'
+        CultureG --not playable
+        lifegame --not playable
+        mastermind --playable **
+        mathgame --playable *
+        hackGame --playable *
+        hackGameScore --playable **
+
+
+ ## Welcome my niece, 
+ **here is your afternoon exercise. You must reach 30 points in these two exo:**
+        - mathgame
+        - hackGameScore
+*have fun*

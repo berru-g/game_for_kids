@@ -58,6 +58,7 @@ def main():
     print(Fore.CYAN +"option : tape '-score' pour afficher ton score.")
     print(Fore.CYAN + "+ et - = 1 point")
     print(Fore.CYAN + "* et / = 2 points")
+    print(Fore.RED + "Mauvaise réponse = -1 point")
     addition_score = 0
     subtraction_score = 0
     multiplication_score = 0

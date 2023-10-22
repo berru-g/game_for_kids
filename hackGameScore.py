@@ -62,7 +62,7 @@ def exercice_detection_intrusion():
                 time.sleep(0.1)
             print(Style.RESET_ALL)
             click.secho("succès.", fg="green", bold=True)
-            score += 50  # egg
+            score += 29  # egg
         elif ligne_commande == "check -system":
             for i in range(20):
                 print(Fore.GREEN + Style.BRIGHT + "▮" * i, end="\r")
@@ -79,7 +79,7 @@ def exercice_detection_intrusion():
             score += 3  # Ajouter 3 points au score
         elif ligne_commande == "help":
             click.secho("Voici quelques commandes utiles :", fg="cyan")
-            print("scan -network : pour vérifier si l'intrus est sur le réseau.")
+            print("scan -network ou scan -net: pour vérifier si l'intrus est sur le réseau.")
             print("check -system : pour vérifier si l'intrus est sur le système.")
             print("remove -malware : pour prendre des mesures contre la menace.")
         elif ligne_commande == "list":
@@ -91,17 +91,18 @@ def exercice_detection_intrusion():
             click.secho("4. Collectez des journaux pour surveiller le réseau", fg="green")
             return  # Revenir au menu principal
         else:
-            click.secho("Commande non reconnue. Tapez 'list' ou 'help' pour voir les commandes disponibles.", fg="red")
+            click.secho("Commande non reconnue. Tapez 'list' ou 'help'.", fg="red")
 
         click.secho("Passons à l'étape suivante...", fg="cyan")
-g = Figlet(font='slant')
-if score >= 30:
-    for i in range(40):
-        print(Fore.GREEN + Style.BRIGHT + "▮" * i, end="\r")
-        print(g.renderText('Hack'))
-        time.sleep(0.1)
-        winsound.Beep(1000, 200)
-    print(Style.RESET_ALL)
+
+        if score >= 30:
+            click.secho("Votre score est de 30 POINTS BRAVO", fg="green")
+            for i in range (10):
+                print(Fore.GREEN + Style.BRIGHT + "▮" * i, end="\r")
+                time.sleep(0.1)
+                winsound.Beep(1000, 200)
+            print(Fore.RED + Style.BRIGHT + f"{f.renderText('Hacked')}" + Fore.BLUE + f"{f.renderText('---------')}")
+            print(Style.RESET_ALL)
 
 
 # Exercice 2 : Gestion du Pare-feu
@@ -114,17 +115,17 @@ def exercice_gestion_pare_feu():
     description_exercice = "Votre tâche est de configurer un pare-feu pour bloquer les connexions non autorisées vers un serveur web."
 
     # Indice 1
-    indice1 = "Utilisez la commande 'configure-firewall' pour accéder à la configuration du pare-feu."
+    indice1 = "Utilisez la commande 'configure -firewall' pour accéder à la configuration du pare-feu."
 
     # Indice 2
-    indice2 = "Ajoutez une règle '-port 00' pour autoriser uniquement les connexions sur le port 80."
+    indice2 = "Ajoutez une règle '-port00' pour autoriser uniquement les connexions sur le port 80."
 
     print("Description de l'exercice :")
     print(description_exercice)
 
     # Question
     click.secho("Question : Comment configureriez-vous le pare-feu pour autoriser uniquement les connexions sur le port 80 ?", fg="cyan")
-    reponse_attendue = "configure-firewall -port 80"
+    reponse_attendue = "configure -firewall -port80"
 
     while True:
         reponse_joueur = input("Votre réponse : ")
@@ -145,14 +146,14 @@ def exercice_gestion_pare_feu():
     while True:
         ligne_commande = input("Entrez une ligne de commande ou tapez 'help' : ")
 
-        if ligne_commande == "configure-firewall":
+        if ligne_commande == "configure -firewall":
             for i in range(20):
                 print(Fore.GREEN + Style.BRIGHT + "▮" * i, end="\r")
                 time.sleep(0.1)
             print(Style.RESET_ALL)
             click.secho("Succès ! Vous avez accédé à la configuration du pare-feu.", fg="green", bold=True)
             score += 3  # Ajouter 3 points au score
-        elif ligne_commande == "add-rule port 80":
+        elif ligne_commande == "add -rule -port80":
             for i in range(20):
                 print(Fore.GREEN + Style.BRIGHT + "▮" * i, end="\r")
                 time.sleep(0.1)
@@ -161,27 +162,26 @@ def exercice_gestion_pare_feu():
             score += 3  # Ajouter 3 points au score
         elif ligne_commande == "help":
             click.secho("Voici quelques commandes utiles :", fg="cyan")
-            print("configure-firewall : pour accéder à la configuration du pare-feu.")
-            print("add-rule port 80 : pour ajouter une règle pour autoriser le port 80.")
+            print("configure -firewall : pour accéder à la configuration du pare-feu.")
+            print("add -rule -port80 : pour ajouter une règle pour autoriser le port 80.")
         elif ligne_commande == "list":
-            print(Fore.CYAN + Style.BRIGHT + f"{f.renderText('Hack')}" + Fore.BLUE + f"{f.renderText('*')}")
+            print(Fore.CYAN + Style.BRIGHT + f"{f.renderText('Hack')}" + Fore.BLUE + f"{f.renderText('-')}")
             click.secho("1. Détection d'intrusion", fg="green")
             click.secho("2. Gestion du Pare-feu", fg="green")
             click.secho("3. Collecte des Données", fg="green")
             click.secho("4. Collectez des journaux pour surveiller le réseau", fg="green")
             return  # Revenir au menu principal
         else:
-            click.secho("Commande non reconnue. Tapez 'help' pour voir les commandes disponibles.", fg="red")
+            click.secho("Commande non reconnue. Tapez 'help'.", fg="red")
 
         click.secho("Passons à l'étape suivante...", fg="cyan")
         if score >= 30:
-            click.secho("30POINTS", fg="green")
-            g = Figlet(font='slant')
-            for i in range(40):
+            click.secho("Votre score est de 30 POINTS BRAVO", fg="green")
+            for i in range (10):
                 print(Fore.GREEN + Style.BRIGHT + "▮" * i, end="\r")
-                print(g.renderText('Hack'))
                 time.sleep(0.1)
                 winsound.Beep(1000, 200)
+            print(Fore.RED + Style.BRIGHT + f"{f.renderText('Hacked')}" + Fore.BLUE + f"{f.renderText('---------')}")
             print(Style.RESET_ALL)
     
 
@@ -198,7 +198,7 @@ def exercice_collecte_data():
     indice1 = "Utilisez la commande 'scan -network' pour lister les dispositifs connectés."
 
     # Indice 2
-    indice2 = "Analysez les résultats pour identifier les dispositifs inconnus ou non autorisés."
+    indice2 = "Analysez les résultats pour identifier les dispositifs inconnus ou non autorisés. *egg = scan -net =30pts"
 
     print("Description de l'exercice :")
     print(description_exercice)
@@ -233,7 +233,7 @@ def exercice_collecte_data():
             print(Style.RESET_ALL)
             click.secho("Succès ! Vous avez listé les dispositifs connectés au réseau.", fg="green", bold=True)
             score += 3  # Ajouter 3 points au score
-        elif ligne_commande == "analyze-results":
+        elif ligne_commande == "analyze -results":
             for i in range(20):
                 print(Fore.GREEN + Style.BRIGHT + "▮" * i, end="\r")
                 time.sleep(0.1)
@@ -242,8 +242,8 @@ def exercice_collecte_data():
             score += 3  # Ajouter 3 points au score
         elif ligne_commande == "help":
             click.secho("Voici quelques commandes utiles :", fg="cyan")
-            print("scan-network : pour lister les dispositifs connectés au réseau.")
-            print("analyze-results : pour analyser les résultats et identifier des dispositifs non autorisés.")
+            print("scan -network : pour lister les dispositifs connectés au réseau.")
+            print("analyze -results : pour analyser les résultats et identifier des dispositifs non autorisés.")
         elif ligne_commande == "list":
             click.secho("1. Détection d'intrusion", fg="green")
             click.secho("2. Gestion du Pare-feu", fg="green")
@@ -251,25 +251,25 @@ def exercice_collecte_data():
             click.secho("4. Collectez des journaux pour surveiller le réseau", fg="green")
             return  # Revenir au menu principal
         else:
-            click.secho("Commande non reconnue. Tapez 'help' pour voir les commandes disponibles.", fg="red")
+            click.secho("Commande non reconnue. Tapez 'help'.", fg="red")
 
         click.secho("Passons à l'étape suivante...", fg="cyan")
         if score >= 30:
-            click.secho("30POINTS", fg="green")
-            g = Figlet(font='slant')
-            for i in range(40):
+            click.secho("Votre score est de 30 POINTS BRAVO", fg="green")
+            for i in range (10):
                 print(Fore.GREEN + Style.BRIGHT + "▮" * i, end="\r")
-                print(g.renderText('Hack'))
                 time.sleep(0.1)
                 winsound.Beep(1000, 200)
+            print(Fore.RED + Style.BRIGHT + f"{f.renderText('Hacked')}" + Fore.BLUE + f"{f.renderText('---------')}")
             print(Style.RESET_ALL)
-
+            
 @click.command()
 def main():
     global score  # Utiliser la variable score globale
-    print(Fore.CYAN + Style.BRIGHT + f"{f.renderText('Hack Learn')}" + Fore.BLUE + f"{f.renderText('---------')}")
-    click.secho("Bienvenue dans la simulation S&R - Hackeur white hat", fg="green", bold=True)
-    print("Tapez 'list' pour afficher les différentes options.")
+    print(Fore.WHITE + Style.BRIGHT + f"{f.renderText('Hack Learn')}" + Fore.BLUE + f"{f.renderText('---------')}")
+    click.secho("Bienvenue dans la simulation - Hackeur white hat", fg="green", bold=True)
+    click.secho("Ta mission est de faire ces 3 exercies, réponds à la question '= 1 point' , puis tape les lignes de commande '= 3 points' recommandé via la cmd help", fg="blue", bold=True)
+    print("Tapez 'list' pour afficher tes missions.")
 
     while True:
         command = input("> ")
@@ -290,7 +290,7 @@ def main():
         elif command == "exit":
             break
         else:
-            click.secho("Commande inconnue. Tapez 'list' pour voir les options disponibles.", fg="red")
+            click.secho("Commande inconnue. Tapez 'list' pour voir les exercices.", fg="red")
 
 if __name__ == "__main__":
     main()
