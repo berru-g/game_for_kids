@@ -101,7 +101,7 @@ def exercice_detection_intrusion():
                 print(Fore.GREEN + Style.BRIGHT + "▮" * i, end="\r")
                 time.sleep(0.1)
                 winsound.Beep(1000, 200)
-            print(Fore.RED + Style.BRIGHT + f"{f.renderText('Hacked')}" + Fore.BLUE + f"{f.renderText('---------')}")
+            print(Fore.RED + Style.BRIGHT + f"{f.renderText('Good work')}")
             print(Style.RESET_ALL)
 
 
@@ -181,7 +181,7 @@ def exercice_gestion_pare_feu():
                 print(Fore.GREEN + Style.BRIGHT + "▮" * i, end="\r")
                 time.sleep(0.1)
                 winsound.Beep(1000, 200)
-            print(Fore.RED + Style.BRIGHT + f"{f.renderText('Hacked')}" + Fore.BLUE + f"{f.renderText('---------')}")
+            print(Fore.RED + Style.BRIGHT + f"{f.renderText('Good work')}")
             print(Style.RESET_ALL)
     
 
@@ -260,15 +260,17 @@ def exercice_collecte_data():
                 print(Fore.GREEN + Style.BRIGHT + "▮" * i, end="\r")
                 time.sleep(0.1)
                 winsound.Beep(1000, 200)
-            print(Fore.RED + Style.BRIGHT + f"{f.renderText('Hacked')}" + Fore.BLUE + f"{f.renderText('---------')}")
+            print(Fore.RED + Style.BRIGHT + f"{f.renderText('Good work')}")
             print(Style.RESET_ALL)
             
 @click.command()
 def main():
     global score  # Utiliser la variable score globale
     print(Fore.WHITE + Style.BRIGHT + f"{f.renderText('Hack Learn')}" + Fore.BLUE + f"{f.renderText('---------')}")
-    click.secho("Bienvenue dans la simulation - Hackeur white hat", fg="green", bold=True)
-    click.secho("Ta mission est de faire ces 3 exercies, réponds à la question '= 1 point' , puis tape les lignes de commande '= 3 points' recommandé via la cmd help", fg="blue", bold=True)
+    click.secho("Bienvenue ton exo system et reseau", fg="green", bold=True)
+    click.secho("Ta mission est de faire ces 3 exercices. Réponds à la question '= 1 point' , puis tape les lignes de commande recommandé via la cmd help '= 3 points' ", fg="blue", bold=True)
+    click.secho("Si une commande ne fonctionne pas, reviens faire l'exo aprés la prochaine étape.", fg="blue", bold=True)
+
     print("Tapez 'list' pour afficher tes missions.")
 
     while True:
