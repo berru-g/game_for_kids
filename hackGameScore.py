@@ -3,12 +3,17 @@ from colorama import Fore, Style, init
 from pyfiglet import Figlet
 import winsound
 import time
+import ctypes
+
+def set_cmd_window_title(title):
+    ctypes.windll.kernel32.SetConsoleTitleW(title)
+
+set_cmd_window_title("Hack Game")
 
 init(autoreset=True)
 f = Figlet(font='slant')
 e = Figlet(font='larry3D')
 
-# Initialisation du score
 score = 0
 
 # Fonction pour afficher un indice avec un délai
@@ -272,8 +277,8 @@ def main():
     global score  # Utiliser la variable score globale
     print(Fore.WHITE + Style.BRIGHT + f"{f.renderText('Hack Learn')}" + Fore.BLUE + f"{f.renderText('---------')}")
     click.secho("Bienvenue dans ton exo system et reseau", fg="green", bold=True)
-    click.secho("Ta mission est de faire ces 3 exercices. Réponds à la question '= 1 point' , puis tape les lignes de commande recommandé via la cmd help '= 3 points' ", fg="blue", bold=True)
-    click.secho("Si une commande ne fonctionne pas, reviens faire l'exo aprés la prochaine étape.", fg="blue", bold=True)
+    click.secho("Ta mission est de faire les 3 premier exercices, puis de revenir dans l'exo 1 pour scanner de nouveau le reseau afin de vérifier si il est clean.", fg="blue", bold=True)
+    click.secho("Réponds à la question '= 1 point' , puis tape les lignes de commande recommandé via la cmd help '= 3 points' ", fg="blue", bold=True)
 
     print("Tapez 'list' pour afficher tes missions.")
 

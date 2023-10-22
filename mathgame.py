@@ -3,6 +3,12 @@ from colorama import Fore, Style, init
 from pyfiglet import Figlet
 import winsound
 import time
+import ctypes
+
+def set_cmd_window_title(title):
+    ctypes.windll.kernel32.SetConsoleTitleW(title)
+
+set_cmd_window_title("Math Game")
 
 init(autoreset=True)
 f = Figlet(font='slant')
