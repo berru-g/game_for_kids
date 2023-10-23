@@ -24,3 +24,13 @@
         - hackGameScore
         
 *have fun*
+
+        **HackGame**
+
+<img width="577" alt="hackgame" src="https://github.com/berru-g/game_for_kids/assets/61543927/a3699a53-afb3-4aa1-a2fd-b7e1733144fe">
+
+
+        **MathGame**
+
+<img width="575" alt="mathgame" src="https://github.com/berru-g/game_for_kids/assets/61543927/b8d1cbe0-5119-44ba-9993-ea55c78a786a">
+
