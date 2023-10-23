@@ -25,7 +25,7 @@
         
 *have fun*
 
-        **HackGame**
+        **HackGameScore**
 
 <img width="577" alt="hackgame" src="https://github.com/berru-g/game_for_kids/assets/61543927/a3699a53-afb3-4aa1-a2fd-b7e1733144fe">
 
