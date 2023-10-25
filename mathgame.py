@@ -58,7 +58,7 @@ def jouer_melodie():
         time.sleep(1)
 
 def main():
-    print(Fore.CYAN + Style.BRIGHT + f"{f.renderText('Math Game')}" + Fore.BLUE + f"{f.renderText('---------')}")
+    print(Fore.CYAN + Style.BRIGHT + f"{f.renderText('Math Game')}" + Fore.BLUE + f"{e.renderText('- + / *')}")
     player_name = input("Entre ton nom de joueur : ")
     print(f"Bienvenue dans le jeu de mathématiques, {player_name} ! Réponds aux questions pour gagner des points.")
     print(Fore.CYAN +"option : tape '-score' pour afficher ton score.")

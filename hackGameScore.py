@@ -275,7 +275,7 @@ def exercice_collecte_data():
 @click.command()
 def main():
     global score  # Utiliser la variable score globale
-    print(Fore.WHITE + Style.BRIGHT + f"{f.renderText('Hack Learn')}" + Fore.BLUE + f"{f.renderText('---------')}")
+    print(Fore.WHITE + Style.BRIGHT + f"{f.renderText('Hacking')}" + Fore.BLUE + f"{e.renderText('Game')}")
     click.secho("Bienvenue dans ton exo system et reseau", fg="green", bold=True)
     click.secho("Ta mission est de faire les 3 premier exercices, puis de revenir dans l'exo 1 pour scanner de nouveau le reseau afin de vérifier si il est clean.", fg="blue", bold=True)
     click.secho("Réponds à la question '= 1 point' , puis tape les lignes de commande recommandé via la cmd help '= 3 points' ", fg="blue", bold=True)
