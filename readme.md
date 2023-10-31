@@ -27,7 +27,9 @@
 
         **HackGameScore**
 
-<img width="577" alt="hackgame" src="https://github.com/berru-g/game_for_kids/assets/61543927/a3699a53-afb3-4aa1-a2fd-b7e1733144fe">
+<!--<img width="577" alt="hackgame" src="https://github.com/berru-g/game_for_kids/assets/61543927/a3699a53-afb3-4aa1-a2fd-b7e1733144fe">-->
+<img width="671" alt="hack-game" src="https://github.com/berru-g/game_for_kids/assets/61543927/37a22c55-6582-459b-92fb-22c3c62431fe">
+
 
 
         **MathGame**
